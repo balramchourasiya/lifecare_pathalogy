@@ -1,0 +1,171 @@
+.login_container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F4F4F4; /* Light background for the whole page */
+    padding: 20px; /* Add some padding around the form */
+    box-sizing: border-box; /* Include padding in element's total width/height */
+}
+
+.login_form_container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF; /* White background for the form itself */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Softer, more modern shadow */
+    border-radius: 15px; /* Slightly less rounded corners */
+    padding: 40px; /* More internal padding */
+    width: 100%; /* Make it responsive */
+    max-width: 450px; /* Max width for desktop */
+    min-height: 500px; /* Ensure enough height for content */
+    box-sizing: border-box;
+}
+
+/* The .left class is redundant here as the form_container acts as the main content area */
+/* If there was a distinct left/right side, then flex would be useful. */
+/* For now, we'll remove its specific styling as it's causing issues. */
+.left {
+    /* flex: 2; */ /* Remove this, as it's for multi-column layouts */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: rgba(217, 217, 217, 0.15); */ /* Remove or adjust if you want a different background */
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */ /* Remove or adjust */
+    /* border-radius: 25px; */ /* Remove or adjust */
+    width: 100%; /* Ensure it takes full width of its parent */
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure form takes full width of its parent */
+}
+
+.form_container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(24px, 5vw, 30px); /* Responsive font size */
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 2.25px;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 30px; /* Space below heading */
+}
+
+.form_container h2 {
+    width: 100%; /* Responsive width */
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(12px, 3vw, 14px); /* Responsive font size */
+    line-height: 1.5;
+    text-align: center;
+    color: #333333;
+    margin-top: 20px; /* Space above "Don't have an account?" */
+}
+
+.input {
+    outline: none;
+    border: 1px solid #cccccc; /* Softer border */
+    padding: 15px;
+    border-radius: 8px; /* Slightly less rounded */
+    margin: 10px 0;
+    font-size: 16px; /* Slightly larger font */
+    width: 100%; /* Responsive width */
+    max-width: 344px; /* Max width for consistency */
+    background: #FFFFFF;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1); /* Softer inner shadow */
+    box-sizing: border-box; /* Crucial for consistent sizing */
+}
+
+.error_msg {
+    width: 100%; /* Responsive width */
+    max-width: 370px; /* Max width for consistency */
+    padding: 15px;
+    margin: 10px 0; /* More margin for visibility */
+    font-size: 14px;
+    background-color: #f34646;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.success_msg {
+    width: 100%;
+    max-width: 370px; /* Max width for consistency */
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.green_btn {
+    border: none;
+    outline: none;
+    color: white;
+    margin: 15px 0; /* More vertical margin */
+    width: 100%; /* Responsive width */
+    max-width: 235px; /* Max width for consistency */
+    height: 45px; /* Slightly taller button */
+    background: #FBBD66;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    border-radius: 50px; /* More rounded, pill-like */
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600; /* Bolder text */
+    font-size: 16px; /* Slightly larger font */
+    line-height: 1; /* Adjust line height */
+    display: flex; /* Use flex to center text vertically */
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #FFFFFF; /* White text for better contrast */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.green_btn:hover {
+    background-color: #e0ac5d; /* Slightly darker on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25); /* More prominent shadow on hover */
+}
+
+/* Styles for the Forgot Password Link */
+.form_container a {
+    text-decoration: none; /* Remove underline */
+    color: #3073D9; /* Blue color for links */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.form_container a:hover {
+    color: #1a5bbd; /* Darker blue on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+    .login_form_container {
+        padding: 20px; /* Less padding on very small screens */
+    }
+
+    .input,
+    .green_btn,
+    .error_msg,
+    .success_msg {
+        max-width: 100%; /* Allow elements to take full width */
+    }
+}

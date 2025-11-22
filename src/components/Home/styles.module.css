@@ -1,0 +1,258 @@
+/*
+ * Updated styles.module.css
+ * This file uses a modern, responsive approach with Flexbox for a clean layout.
+ */
+
+/* General and Utility Styles */
+.home {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.sectionTitle {
+    background-color: #3073D9;
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Hero Section */
+.heroSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px; /* Or a responsive height like 80vh */
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.heroImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    z-index: -1;
+}
+
+.heroContent {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.heroTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1E1E1E;
+    margin-bottom: 30px;
+}
+
+.heroButton {
+    background-color: #FBBD66;
+    color: #000000;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.heroButton:hover {
+    background-color: #e0ac5d;
+}
+
+/* Tests Section */
+.testsSection {
+    margin: 40px 0;
+}
+
+.testGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #F4F4F4;
+    border-radius: 25px;
+}
+
+.testCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    text-decoration: none;
+    color: #000000;
+    transition: transform 0.3s ease;
+}
+
+.testCard:hover {
+    transform: translateY(-5px);
+}
+
+.testIcon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.testName {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Feedback Section */
+.feedbackSection {
+    position: relative;
+    margin: 40px 0;
+    padding: 60px 20px 20px;
+    background-color: #F4F4F4;
+    border-radius: 25px;
+}
+
+.feedbackSection .sectionHeader {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    margin: 0;
+}
+
+.feedbackSlider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.feedbackCard {
+    flex: 0 0 350px; /* Fixes card width and prevents shrinking */
+    scroll-snap-align: start;
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviewText {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.reviewerName {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: right;
+}
+
+.feedbackButton {
+    display: block;
+    width: 250px;
+    margin: 30px auto 0;
+    background-color: #FBBD66;
+    color: #000000;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.feedbackButton:hover {
+    background-color: #e0ac5d;
+}
+
+/* Footer Section */
+.footerSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 40px 20px;
+    background-color: #F4F4F4;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.footerHeader {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3073D9;
+    margin-bottom: 15px;
+}
+
+.footerLinks, .contactInfo, .socialInfo {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footerLink {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footerSection {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feedbackSection .sectionHeader {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}
+
+/* Add this to your styles.module.css file */
+
+.success_msg {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}

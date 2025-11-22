@@ -1,0 +1,240 @@
+/*
+ * Updated styles.module.css for BookAppointment Page
+ *
+ * This file has been refactored to use Flexbox for responsive layout,
+ * replacing fixed positioning and pixel values.
+ */
+
+/* Main page container */
+.appointmentPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px; /* Limit overall width for better readability on large screens */
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pageTitle {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 2.25px;
+    text-transform: uppercase;
+}
+
+.pageSubtitle {
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Main content block for calendar and form */
+.mainContent {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 40px; /* Space between calendar and form */
+    justify-content: center;
+    width: 100%;
+}
+
+/* Calendar Section */
+.calendarSection {
+    flex: 1; /* Allows calendar to take available space */
+    min-width: 300px; /* Minimum width for calendar */
+    max-width: 450px; /* Max width for calendar */
+    background: #F5F5F5;
+    box-shadow: 0px 1px 2px rgba(0, 14, 51, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendarLegend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.legendMarker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.booked .legendMarker { background-color: #D8E3FF; } /* Light blue */
+.available .legendMarker { background-color: rgba(40, 220, 91, 0.32); } /* Light green */
+.holiday .legendMarker { background-color: rgba(236, 12, 12, 0.29); } /* Light red */
+
+
+/* Form Section */
+.formSection {
+    flex: 2; /* Allows form to take more space */
+    min-width: 320px; /* Minimum width for form */
+    max-width: 700px; /* Max width for form */
+    background: #F2F2F2;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.formSection h3 {
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(36, 34, 34, 0.905);
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Radio buttons for door-to-door service */
+.radioGroup {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.radioLabel input[type="radio"] {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    accent-color: #FBBD66; /* Style the radio button itself */
+}
+
+/* Price display */
+.priceDisplay {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 10px;
+    padding: 12px;
+    border: 2px solid rgba(36, 34, 34, 0.905);
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+/* Submit Button */
+.submitButton {
+    display: block;
+    width: 250px;
+    padding: 15px 20px;
+    margin: 30px auto 0;
+    background: #FBBD66;
+    border-radius: 100px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #e0ac5d;
+}
+
+/* Link back to home */
+.backLink {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #3073D9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.backLink:hover {
+    color: #1a5bbd;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .mainContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calendarSection,
+    .formSection {
+        max-width: 100%;
+        min-width: unset;
+    }
+}
+
+/* Styles for react-calendar - adjust as needed */
+.react-calendar {
+    border: none !important; /* Override default calendar border */
+    width: 100% !important;
+    max-width: 400px !important; /* Ensure calendar doesn't stretch too wide */
+}
+
+.react-calendar__navigation button {
+    font-size: 1.2em !important;
+}
+
+.react-calendar__tile {
+    padding: 10px 0 !important;
+}
